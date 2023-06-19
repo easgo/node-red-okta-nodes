@@ -1,5 +1,5 @@
 module.exports = function(RED) {
-    function list_group_Node(config) {
+    function okta_list_group_Node(config) {
         RED.nodes.createNode(this, config);
         var node = this;
         node.on('input', function(msg) {
@@ -7,7 +7,7 @@ module.exports = function(RED) {
 
             const apiKey = msg.config.OktaKEY;
             const oktaDomain = msg.config.Domain;
-	    const groupID = msg.groupID;
+			const groupID = msg.groupID;
 
             const options = {
                 headers: {
@@ -47,5 +47,5 @@ module.exports = function(RED) {
         });
     }
 
-    RED.nodes.registerType("list_group", list_group_Node);
+    RED.nodes.registerType("okta_list_group", okta_list_group_Node);
 };

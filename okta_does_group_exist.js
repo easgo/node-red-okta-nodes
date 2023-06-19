@@ -1,7 +1,7 @@
 const https = require('https');
 
 module.exports = function(RED) {
-    function OktaGroupExistsNode(config) {
+    function okta_does_group_exist_node(config) {
         RED.nodes.createNode(this, config);
         var node = this;
 
@@ -29,7 +29,8 @@ module.exports = function(RED) {
                 res.on('end', () => {
                     try {
 			const parsedData = JSON.parse(rawData);
-			if (parsedData.length > 0) {
+			
+			if (parsedData.length > 0) { // Okta doesn't allow 2 groups with the same name so this case isn't taken care of
 				msg.groupID = parsedData[0].id;
 				node.send([msg, null]);
 			}else{
@@ -52,5 +53,5 @@ module.exports = function(RED) {
         });
     }
 
-    RED.nodes.registerType("does_group_exist", OktaGroupExistsNode);
+    RED.nodes.registerType("okta_does_group_exist", okta_does_group_exist_node);
 };

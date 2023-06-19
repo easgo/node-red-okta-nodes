@@ -42,11 +42,16 @@ module.exports = function(RED) {
                     });
 
                     const parsedData = JSON.parse(rawData);
-                    const userId = parsedData[0].id;
-                    results.push(userId);
+		    if (parsedData.length > 0){
+                    	const userId = parsedData[0].id;
+                    	results.push(userId);
+		    }else {
+			throw new Error('The email ' + emails + ' Doesn\'t exist in Okta');
+		    }
+
                 }
 
-                msg.users_id = results;
+                msg.usersId = results;
                 node.send(msg);
             } catch (error) {
                 node.error(error);

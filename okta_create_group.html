@@ -1,24 +1,22 @@
 <script type="text/javascript">
-    RED.nodes.registerType('remove_user_from_group',{
+    RED.nodes.registerType('okta_create_group',{
         category: 'authomize_okta',
         color: '#a6bbcf',
         defaults: {
-            name: {value: "Remove user from group"}
-
+            name: {value: "Okta - Create group"}
         },
-        inputs:2,
-        outputs:1,
-        icon: "file.png",
+        inputs:1,
+        outputs:1
     });
 </script>
 
-<script type="text/html" data-template-name="remove_user_from_group">
+<script type="text/html" data-template-name="okta_create_group">
     <div class="form-row">
                 <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
                 <input type="text" id="node-input-name" placeholder="Name">
         </div>
 </script>
 
-<script type="text/html" data-help-name="remove_user_from_group">
-        <p>Removess users from an existing group</p>
+<script type="text/html" data-help-name="okta_create_group">
+        <p>Creates a group in Okta with provided nams and description</p>
 </script>

@@ -9,12 +9,12 @@
   },
   "node-red" : {
     "nodes": {
-      "add_user_to_group": "add_user_to_group.js",
+      "add_user_to_group": "okta_add_user_to_group.js",
 	  "okta_users_to_id": "okta_users_to_id.js",
-	  "create_okta_group": "create_okta_group.js",
-	  "does_group_exist": "does_group_exist.js",
-	  "remove_user_from_group": "remove_user_from_group.js",
-	  "list_group": "list_group.js"
+	  "create_okta_group": "okta_create_group.js",
+	  "does_group_exist": "okta_does_group_exist.js",
+	  "remove_user_from_group": "okta_remove_user_from_group.js",
+	  "list_group": "okta_list_group.js"
     }
   }
 }

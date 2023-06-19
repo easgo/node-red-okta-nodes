@@ -1,5 +1,5 @@
 module.exports = function(RED) {
-    function create_okta_group(config) {
+    function okta_create_group(config) {
         RED.nodes.createNode(this, config);
         var node = this;
         node.on('input', function(msg) {
@@ -42,5 +42,5 @@ module.exports = function(RED) {
 		});
         });
     }
-    RED.nodes.registerType("create_okta_group", create_okta_group);
+    RED.nodes.registerType("okta_create_group", okta_create_group);
 };
