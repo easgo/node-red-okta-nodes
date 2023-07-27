@@ -1,6 +1,6 @@
 {
   "name": "Open-ITDR-Okta-nodes",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "author": "Authomize LTD",
   "license": "ISC",
@@ -14,6 +14,7 @@
 	  "create_okta_group": "okta_create_group.js",
 	  "does_group_exist": "okta_does_group_exist.js",
 	  "remove_user_from_group": "okta_remove_user_from_group.js",
+	  "suspend_user": "okta_suspend_user.js",
 	  "list_group": "okta_list_group.js"
     }
   }
