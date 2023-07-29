@@ -1,6 +1,6 @@
 # Node-Red-Okta-nodes
 
-This Node-RED package provides nodes for working with Okta, an identity management and single sign-on service. It includes the following nodes:
+This Node-RED packages provides nodes for working with Okta, an identity management and single sign-on service. It includes the following nodes:
 
 ## okta_add_user_to_group.js
 
